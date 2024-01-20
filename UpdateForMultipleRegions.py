@@ -15,7 +15,7 @@ Pre-requisites:
 '''
 # Import the required python Modules
 # boto3 is the Python package to interact with the AWS services
-# cvs module used to iterate through csv flile
+
 
 import boto3
 from botocore.exceptions import ClientError
@@ -53,9 +53,8 @@ def update_ec2_tags_by_resource_id(csv_file, profile_name):
                     print(f"Instance '{resource_id}' not found in region '{region_name}'. Skipping...")
                 else:
                     raise e  
-
-
-
+                
+                
 if __name__ == "__main__":
     
     file_path = os.getcwd()
